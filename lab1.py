@@ -5,7 +5,7 @@ import time
 
 AIO_FEED_IDs = ["button1"]
 AIO_USERNAME = "tien2032002"
-AIO_KEY = "aio_nGew99k2rYq4QXiiIedW2pVDmCpe"
+AIO_KEY = "aio_jczR58scqGob33Af3L6O8echPdkF"
 
 def connected(client):
     print("Ket noi thanh cong ...")
