@@ -6,6 +6,8 @@ import time
 AIO_FEED_IDs = ["button1"]
 AIO_USERNAME = "tien2032002"
 AIO_KEY = "aio_jczR58scqGob33Af3L6O8echPdkF"
+MODEL_PATH = "IOT\keras_model.h5"
+CLASS_NAME_PATH = "IOT\labels.txt"
 
 def connected(client):
     print("Ket noi thanh cong ...")
@@ -29,6 +31,8 @@ client.on_message = message
 client.on_subscribe = subscribe
 client.connect()
 client.loop_background()
+
+
 
 while True:
     client.publish("button1", random.randint(0, 1))

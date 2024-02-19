@@ -1,2 +1,3 @@
-0 Khong khau trang
-1 Khong co nguoi
+0 no mask
+1 no human
+2 masked
