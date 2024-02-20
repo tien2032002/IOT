@@ -3,10 +3,11 @@ from Adafruit_IO import MQTTClient
 import random
 import time
 from simpleAI import *
+from read_sensor import *
 
 AIO_FEED_IDs = ["button1"]
 AIO_USERNAME = "tien2032002"
-AIO_KEY = "aio_FlMg699LpEdLsIgmmFAuSj1MC6UX"
+AIO_KEY = "aio_PNYi47NYBtODV4KxNEKFONaBXBtp"
 MODEL_PATH = "IOT/keras_model.h5"
 CLASS_NAME_PATH = "IOT/labels.txt"
 
@@ -42,7 +43,7 @@ model = load_model("keras_Model.h5", compile=False)
 # Load the labels
 class_names = open("labels.txt", "r").readlines()
 
-
+ser = serial.Serial( port=getPort(), baudrate=115200)
 
 while True:
     client.publish("button1", random.randint(0, 1))
@@ -56,5 +57,6 @@ while True:
 
     # Show the image in a window
     client.publish("AI", simpleAI(model, class_names, image))
-    time.sleep(5)
+    readSerial(client, ser)
+    time.sleep(1)
     pass
