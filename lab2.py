@@ -55,7 +55,6 @@ while True:
     image = cv2.resize(image, (224, 224), interpolation=cv2.INTER_AREA)
 
     # Show the image in a window
-    cv2.imshow("Webcam Image", image)
     client.publish("AI", simpleAI(model, class_names, image))
     time.sleep(5)
     pass
