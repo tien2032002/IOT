@@ -7,7 +7,7 @@ from read_sensor import *
 
 AIO_FEED_IDs = ["button1", "button2"]
 AIO_USERNAME = "tien2032002"
-AIO_KEY = "aio_TBKS74WFQp9DwwzY2Nnahk3YXzfC"
+AIO_KEY = "aio_gLcs26H1I9ATN92a6BjBBqdFHYnT"
 MODEL_PATH = "IOT/keras_model.h5"
 CLASS_NAME_PATH = "IOT/labels.txt"
 
